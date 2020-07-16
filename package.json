@@ -10,6 +10,7 @@
     "@babel/core": "^7.10.4",
     "@storybook/html": "^5.3.19",
     "@storybook/preset-scss": "^1.0.2",
+    "@whitespace/storybook-addon-html": "^1.2.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
     "sass-loader": "^9.0.2",
