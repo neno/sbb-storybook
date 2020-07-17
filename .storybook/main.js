@@ -1,5 +1,11 @@
 module.exports = {
   stories: ['../src/**/*.stories.js'],
   presets: ['@storybook/preset-scss'],
-  addons: ['@whitespace/storybook-addon-html/register'],
+  addons: [
+    '@storybook/addon-a11y/register',
+    '@whitespace/storybook-addon-html/register',
+    '@storybook/addon-actions/register',
+    '@storybook/addon-knobs/register',
+    '@storybook/addon-docs',
+  ],
 };
