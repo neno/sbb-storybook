@@ -1,4 +1,13 @@
-const button = (label = '', classes = [], icon = '') => {
+import React from 'react';
+import icon from '../icon/icon';
+
+const Button = ({
+  label = '',
+  classes = [],
+  iconName = '',
+  disabled = false,
+  attrs,
+}) => {
   let cls = ['a-btn'];
 
   if (label && icon) {
@@ -11,11 +20,13 @@ const button = (label = '', classes = [], icon = '') => {
     cls = [...cls, ...classes];
   }
 
-  return `
-    <button class="${cls.join(' ')}">
-      ${icon}<span>${label}</span>
+  // const ico = iconName && icon(iconName);
+
+  return (
+    <button className={cls.join(' ')} disabled={disabled} {...attrs}>
+      <span>{label}</span>
     </button>
-  `;
+  );
 };
 
-export default button;
+export default Button;
