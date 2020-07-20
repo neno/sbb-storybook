@@ -1,4 +1,4 @@
-// import '../src/styles/main.scss';
+import '../src/main.scss';
 
 import { addDecorator } from '@storybook/html';
 import { withA11y } from '@storybook/addon-a11y';

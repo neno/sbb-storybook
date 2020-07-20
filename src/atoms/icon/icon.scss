@@ -1,0 +1,14 @@
+.a-ico {
+  width: 1em;
+  height: 1em;
+
+  path,
+  polyline {
+    fill: none;
+    stroke: currentColor;
+  }
+
+  &.a-ico--use-fill {
+    fill: currentColor;
+  }
+}

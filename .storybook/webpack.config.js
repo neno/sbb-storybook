@@ -1,12 +1,3 @@
-const fileLoaderRule = {
-  test: /\.(png|jpe?g|gif)$/i,
-  use: [
-    {
-      loader: 'file-loader',
-    },
-  ],
-};
-
 module.exports = async ({ config }) => {
   /* Find the matching JavaScript module rule  */
   const jsRule = config.module.rules.find((rule) => '.js'.match(rule.test));
@@ -20,14 +11,6 @@ module.exports = async ({ config }) => {
 
     /* Add Babel’s preset-react to the rule’s presets */
     options.presets.push('@babel/preset-react');
-  }
-
-  const jsRule2 = config.module.rules.find((rule) => '.png'.match(rule.test));
-
-  if (jsRule2) {
-    console.log('HAS jsRule2', jsRule2);
-  } else {
-    console.log('NO jsRule2');
   }
 
   return config;

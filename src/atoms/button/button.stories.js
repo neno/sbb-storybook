@@ -1,31 +1,31 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import './button.scss';
-import buttonHtml from './button.html';
-// import { iconWorld } from '../icon/icon.stories';
-import Button from './button.js';
+import Button from './index';
+import Icon from '../icon';
 
 export default {
   title: '01 - Atoms/Button',
 };
 
-// export const primary = () => button('Primary Button', ['a-btn--primary']);
-export const primary = () =>
+export const standard = () =>
   renderToStaticMarkup(
-    <Button
-      label='Primary Button'
-      classes={['a-btn--primary']}
-      attrs={{ 'aria-expanded': 'false' }}
-      disabled
-    />
+    <Button>
+      <span>Standard Button</span>
+    </Button>
   );
 
-export const htmlButton = () => buttonHtml;
-
-// export const buttonIconLabel = () =>
-//   button('Button with Icon', [], iconWorld());
-
-export const buttonIconLabel = () =>
+export const disabled = () =>
   renderToStaticMarkup(
-    <Button label='Button with Icon' iconName='iconWorld' />
+    <Button disabled>
+      <span>Disabled Button</span>
+    </Button>
+  );
+
+export const withIcon = () =>
+  renderToStaticMarkup(
+    <Button classNames={['a-btn--ico-lbl']}>
+      <Icon name='world' />
+      <span>Disabled Button</span>
+    </Button>
   );
